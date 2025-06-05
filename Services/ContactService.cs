@@ -6,7 +6,7 @@ namespace ContactManager.Services
     {
         private readonly List<Contact> _contacts = new();
 
-        // Sample records to have some table data
+        // Sample records to have some table data (if deleted NUnit test cases should be edited accordingly)
         public ContactService()
         {
             _contacts = new List<Contact>
@@ -44,7 +44,7 @@ namespace ContactManager.Services
         // Adds a new contact to the list
         public void Add(Contact contact)
         {
-            contact.Id = Guid.NewGuid(); // Ensure ID is set
+            contact.Id = Guid.NewGuid(); 
             _contacts.Add(contact);
         }
 
@@ -72,7 +72,7 @@ namespace ContactManager.Services
             }
         }
 
-        // Searches contacts by name or email (case-insensitive)
+        // Searches contacts by name or email
         public List<Contact> Search(string term)
         {
             if (string.IsNullOrWhiteSpace(term))

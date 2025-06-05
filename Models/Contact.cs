@@ -6,6 +6,7 @@ namespace ContactManager.Models
     {
         public Guid Id { get; set; } = Guid.NewGuid();
 
+        // Contact's name, must be a more than 2 characters and not more than 12
         [Required(ErrorMessage = "Name is required.")]
         [MinLength(2, ErrorMessage = "Name must be at least 2 characters.")]
         [MaxLength(12, ErrorMessage = "Name cannot be longer than 12 characters.")]

@@ -2,7 +2,9 @@
 function loadContacts() {
     $.get('/Contact', function (html) {
         const body = $(html).find('#contactTableBody').html();
-        $('#contactTableBody').html(body); // replace current table content
+
+        // replace current table content
+        $('#contactTableBody').html(body); 
     });
 }
 

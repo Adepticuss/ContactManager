@@ -28,14 +28,12 @@ namespace ContactManager.Controllers
         [HttpPost]
         public IActionResult Create([FromBody] Contact contact)
         {
-            // Check if model is valid
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
             // Add contact using service
             _contactService.Add(contact);
 
-            // Return success response
             return Ok();
         }
 
