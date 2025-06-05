@@ -25,6 +25,26 @@ It supports adding, editing, deleting, and searching contacts with client-side a
    ```bash
    git clone https://github.com/YourUsername/ContactManager.git
    cd ContactManager
+   
+2. Restore NuGet packages:
+    - Using Visual Studio: open the solution and packages will restore automatically  
+    - Or use CLI:
+    ```bash
+    dotnet restore
+    ```
+
+3. Build the project:
+    ```bash
+    dotnet build
+    ```
+
+4. Run the project:
+    - Using Visual Studio: press F5 or click Run  
+    - Or CLI:
+    ```bash
+    dotnet run --project ContactManager
+    ```
+5. Open the application in your browser at the URL displayed in the console.
 
  Prerequisites / Requirements
 
