@@ -25,6 +25,18 @@ It supports adding, editing, deleting, and searching contacts with client-side a
    ```bash
    git clone https://github.com/YourUsername/ContactManager.git
    cd ContactManager
+
+ Prerequisites / Requirements
+
+    - .NET SDK 8.0 or later
+    - Download and install from https://dotnet.microsoft.com/download
+
+    - Visual Studio 2022 or later (recommended) or VS Code with C# extension
+    https://visualstudio.microsoft.com/
+
+    - Node.js and npm (if you have frontend dependencies like Bootstrap, jQuery)
+    Download from https://nodejs.org/
+
 ## 2. Assumptions & Trade-offs
 
 - **In-memory Data Storage:**  
