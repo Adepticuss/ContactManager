@@ -1,0 +1,258 @@
+/* ========== Global Font Sizes ========== */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* ========== Body and Background ========== */
+body {
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #212529;
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* ========== Input & Validation ========== */
+input.form-control {
+    transition: all 0.3s ease;
+}
+
+    input.form-control:focus {
+        border-color: #0056b3;
+        box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
+    }
+
+.is-invalid {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 0.15rem rgba(220, 53, 69, 0.25);
+}
+
+/* ========== Table Styling ========== */
+table tbody tr:hover {
+    background-color: #f0f8ff;
+}
+
+/* ========== Tooltip ========== */
+.tooltip {
+    font-size: 0.85rem;
+}
+
+/* ========== Buttons ========== */
+.btn, .btn:focus {
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+    .btn-primary:hover {
+        background-color: #003f7f;
+    }
+
+.btn-outline-primary {
+    border: 2px solid #007b8f;
+    color: #007b8f;
+    font-weight: 600;
+}
+
+    .btn-outline-primary:hover {
+        background-color: #007b8f;
+        color: white;
+        transform: scale(1.03);
+    }
+
+.btn-outline-secondary {
+    border: 2px solid #6c757d;
+    color: #6c757d;
+    font-weight: 600;
+}
+
+    .btn-outline-secondary:hover {
+        background-color: #6c757d;
+        color: white;
+        transform: scale(1.03);
+    }
+
+/* ========== Add Contact Button ========== */
+#btnAddContact {
+    border: 2px solid #007b8f;
+    background-color: transparent;
+    color: #007b8f;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 6px 18px;
+    transition: all 0.3s ease;
+    box-shadow: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+    #btnAddContact:hover,
+    #btnAddContact:focus {
+        background-color: #007b8f;
+        color: white;
+        border-color: #005960;
+        box-shadow: 0 4px 12px rgba(0, 123, 143, 0.4);
+        transform: scale(1.05);
+    }
+
+@media (max-width: 576px) {
+    #btnAddContact {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+/* ========== Navbar Styling ========== */
+.navbar-transparent {
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border: none !important;
+    box-shadow: none !important;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-brand.text-primary {
+    color: #007b8f !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    font-weight: 700;
+}
+
+.nav-link.text-primary {
+    color: #007b8f !important;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+    .nav-link.text-primary:hover,
+    .nav-link.text-primary.active {
+        color: #004d57 !important;
+        text-decoration: none;
+        filter: drop-shadow(0 0 1px rgba(0, 77, 87, 0.6));
+    }
+
+/* ========== Header ========== */
+header h1 {
+    color: #007b8f;
+    font-weight: 700;
+    margin: 0;
+    padding: 15px 0;
+}
+
+/* ========== Modal Styling (Glassmorphism) ========== */
+.custom-modal {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+    .custom-modal .modal-header {
+        background: linear-gradient(to right, #007b8f, #00bcd4);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+
+    .custom-modal .modal-footer {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, 0.05);
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .custom-modal .form-control {
+        background-color: rgba(255, 255, 255, 0.9);
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        padding: 0.6rem 0.75rem;
+        color: #212529;
+        transition: all 0.3s ease;
+    }
+
+        .custom-modal .form-control:focus {
+            border-color: #00bcd4;
+            box-shadow: 0 0 6px rgba(0, 188, 212, 0.4);
+        }
+
+    .custom-modal .btn {
+        border-radius: 0.5rem;
+        padding: 0.5rem 1.2rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+        .custom-modal .btn i {
+            transition: transform 0.2s ease;
+        }
+
+        .custom-modal .btn:hover i {
+            transform: scale(1.1);
+        }
+
+    .custom-modal .btn-primary {
+        background-color: #007b8f;
+        color: #fff;
+    }
+
+        .custom-modal .btn-primary:hover {
+            background-color: #005f6a;
+            transform: scale(1.03);
+        }
+
+    .custom-modal .btn-secondary {
+        background-color: #6c757d;
+        color: #fff;
+    }
+
+        .custom-modal .btn-secondary:hover {
+            background-color: #5a6268;
+            transform: scale(1.03);
+        }
+
+
+/* Optional: Align icon buttons better in tables */
+.table .btn i {
+    vertical-align: middle;
+}
+
+/* Optional: Ensure consistent size */
+.table .btn {
+    padding: 0.375rem 0.6rem;
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-outline-danger {
+    border: 2px solid #dc3545;
+    color: #dc3545;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+    .btn-outline-danger:hover {
+        background-color: #dc3545;
+        color: white;
+        transform: scale(1.03);
+    }
+

@@ -1,0 +1,74 @@
+﻿@model List<ContactManager.Models.Contact>
+
+@{
+    ViewData["Title"] = "Contact Manager";
+}
+
+<!-- Bootstrap container for overall layout -->
+<div class="container mt-4">
+    <h2 class="mb-4 text-primary">📇 Contact Manager</h2>
+
+    <!-- Search input -->
+    <div class="input-group mb-3">
+        <input id="searchInput" type="text" class="form-control" placeholder="Search by name or email" />
+        <button class="btn btn-outline-secondary" type="button" onclick="searchContacts()">🔍 Search</button>
+    </div>
+
+    <!-- Add contact button -->
+    <div class="mb-3">
+        <button id="btnAddContact" class="btn" onclick="showAddModal()">➕ Add Contact</button>
+    </div>
+
+    <!-- Contact list table -->
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Name 🧑</th>
+                <th>Email 📧</th>
+                <th>Phone ☎️</th>
+                <th style="width: 140px;">Actions ⚙️</th>
+            </tr>
+        </thead>
+        <tbody id="contactTableBody">
+            @foreach (var contact in Model)
+            {
+                <tr data-id="@contact.Id">
+                    <td>@contact.Name</td>
+                    <td>@contact.Email</td>
+                    <td>@contact.Phone</td>
+                    <td>
+                        @* <button class="btn btn-sm btn-primary me-1" onclick="showEditModal('@contact.Id')">✏️ Edit</button>
+                        <button class="btn btn-sm btn-danger" onclick="deleteContact('@contact.Id')">🗑️ Delete</button> *@
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-outline-primary btn-sm" title="Edit" onclick="showEditModal('@contact.Id')">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+                            <button class="btn btn-outline-danger btn-sm" title="Delete" onclick="deleteContact('@contact.Id')">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Modals for Add/Edit -->
+<div id="contactModalContainer"></div>
+
+<!-- Load scripts -->
+@section Scripts {
+    <!-- jQuery from CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS (for modal) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Our custom script -->
+    <script src="~/js/contact.js"></script>
+}

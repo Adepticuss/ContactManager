@@ -1,0 +1,22 @@
+# Ignore Visual Studio user-specific and build files
+.vs/
+*.user
+*.suo
+*.VC.db
+*.vsp
+*.pdb
+*.dbmdl
+
+# Ignore build results
+bin/
+obj/
+
+# Ignore test results
+TestResults/
+*.trx
+
+# Ignore node_modules (if applicable)
+node_modules/
+
+# Ignore logs
+*.log
