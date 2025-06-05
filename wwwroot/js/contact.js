@@ -192,6 +192,7 @@ function deleteContact(contactId) {
         data: JSON.stringify(contactId),
         success: function () {
             loadContacts();
+            showToast("Delete", "Contact deleted successfully", "danger");
         },
         error: function () {
             alert('Failed to delete contact.');
@@ -232,7 +233,7 @@ function searchContacts() {
     });
 }
 
-// Adds a dismissible toast
+//Adds a dismissible toast
 function showToast(title, message, type = "info") {
     const bgColorClass = {
         success: 'bg-success text-white',
